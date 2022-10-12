@@ -2,7 +2,7 @@ import bs4
 import requests
 
 #date du lundi pour la semaine a scrapper !!!! semaine de cours obligatoirement !!!! (format mm/jj/aaaa)
-date = "02/14/2022"
+date = "10/10/2022"
 
 #eleve selon la personne pour qui on veut recuperer l'emploi du temps (format prenom.nom)
 #eleve = "alexandre.tison"
@@ -20,7 +20,7 @@ lstJours = []
 for td in soup.find_all('div', {"class": "Jour"}):
     for fin in str(td.text).splitlines():
         lstJours.append(fin)
-lstJours = lstJours[0:5]
+lstJours = list(lstJours[0:5])
 
 lstCours = []
 for td in soup.find_all('td', {"class": "TCase"}):
@@ -42,7 +42,6 @@ print(lstHoraire)
 print(lstCours)
 print(lstProf)
 
-dicoCours = {}
 
 
 """
@@ -107,13 +106,54 @@ html="""<html>
 <table>
 """
 
-corps = ""
 
-fin="</table></body>"
+lstSep = []
+for i in range(0,len(lstHoraire)):
+    if i+1 < len(lstHoraire):
+        if lstHoraire[i+1][8:-3] in ("10","11","12"): #("08","09","10","11","12")
+            lstSep.append(i)
 
-html_complete = html+corps+fin
+    elif i+1 == len(lstHoraire):
+        lstSep.append(i)
 
-f = open('EDT.html', 'w') 
+#print(lstSep)
+
+lstSemaine = []
+for j in range(0,len(lstCours)):
+    if 0 <= j <= lstSep[0]:
+        lstSemaine.append(lstJours[0])
+    if lstSep[0] <= j < lstSep[1]:
+        lstSemaine.append(lstJours[1])
+    if lstSep[1] <= j < lstSep[2]:
+        lstSemaine.append(lstJours[2])
+    if lstSep[2] <= j < lstSep[3]:
+        lstSemaine.append(lstJours[3])
+    if lstSep[3] <= j < lstSep[4]:
+        lstSemaine.append(lstJours[4])
+    
+#print(lstSemaine)
+    
+
+lstLesCours = []
+for i in range(0,len(lstCours)-1):
+    dic = {}
+    dic["Jour"] = lstSemaine[i]
+    dic["Cours"] = lstCours[i]
+    dic["Horaire"] = lstHoraire[i]
+    dic["Prof"] =  lstProf[i]
+    lstLesCours.append(dic)
+
+complet = ""
+for cours in lstLesCours:
+    content = "<td>"+cours["Jour"]+"\n"+cours["Cours"]+"\n"+cours["Horaire"]+"\n"+cours["Prof"]+"</td>"
+    complet = complet + content
+
+tab = "<thead><th>EDT</th></thead><tbody><tr>"
+fin="</tr></tbody></table></body></html>"
+
+html_complete = html+tab+complet+fin
+
+f = open('EDT.html', 'w')
 
 f.write(html_complete) 
   
