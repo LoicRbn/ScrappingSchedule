@@ -1,0 +1,60 @@
+Jour : Lundi 07 Février
+Cours : HEP Ethique
+Horaire : 10:15 - 12:30
+Prof : grockowiak morganeGr B
+
+Jour : Lundi 07 Février
+Cours : Techniques de communication pr
+Horaire : 13:30 - 17:30
+Prof : boutonnet jean-pierreB3 CDA Gr B
+
+Jour : Mardi 08 Février
+Cours : Atelier : L’industrialisation
+Horaire : 08:30 - 12:30
+Prof : nguyen denisB3 CDA Gr B
+
+Jour : Mardi 08 Février
+Cours : Case Study (usual English)
+Horaire : 13:30 - 16:30
+Prof : hardstaff debraB3 CDA Gr B
+
+Jour : Mardi 08 Février
+Cours : Module HEP : Ethique professio
+Horaire : 16:30 - 18:00
+Prof : montagne fabienGr B
+
+Jour : Mercredi 09 Février
+Cours : MSPR : Administrer & sécuriser
+Horaire : 08:30 - 12:30
+Prof : deliessche christianB3 CDA Gr B
+
+Jour : Mercredi 09 Février
+Cours : Atelier développement mobiles 
+Horaire : 13:30 - 17:30
+Prof : benbahlouli nahimB3 CDA Gr B
+
+Jour : Mercredi 09 Février
+Cours : Le langage SQL & SGBD Oracle
+Horaire : 13:30 - 17:30
+Prof : gaber khalidB3 CDA Gr B
+
+Jour : Jeudi 10 Février
+Cours : MSPR : Développement d'une app
+Horaire : 08:30 - 12:30
+Prof : baraffe robinB3 CDA Gr B
+
+Jour : Jeudi 10 Février
+Cours : Atelier pratique Approche DevO
+Horaire : 13:30 - 17:00
+Prof : paprocki florentB3 CDA Gr B
+
+Jour : Vendredi 11 Février
+Cours : MSPR : Administrer & sécuriser
+Horaire : 08:30 - 12:30
+Prof : grockowiak morganeB3 CDA Gr B
+
+Jour : Vendredi 11 Février
+Cours : Atelier : L’industrialisation
+Horaire : 13:30 - 17:30
+Prof : nguyen denisB3 CDA Gr B
+
